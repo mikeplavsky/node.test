@@ -11,3 +11,14 @@ setInterval( function () {
 setInterval( function() {
   console.log( "Hello, World!" );
 }, 2000 );
+
+
+http.Server(function(req,res) {
+  
+  res.writeHead(200);
+  
+  setTimeout( function() {
+    res.end( "Done as you wanted!" );
+  }, 2000);
+
+}).listen( 8000 );
